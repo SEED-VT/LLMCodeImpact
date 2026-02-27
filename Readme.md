@@ -1,6 +1,7 @@
 # Assessing the Impact of Code Changes on the Fault Localizability of Large Language Models
 
 **Paper:** [arXiv Preprint](https://arxiv.org/abs/2504.04372)  
+**Artifact Archive:** [Zenodo Permanent Record](https://doi.org/10.5281/zenodo.18796544)  
 **Authors:** Sabaat Haroon, Ahmad Faraz Khan, Ahmad Humayun, Waris Gill, Abdul Haddi Amjad, Ali R. Butt, Mohammad Taha Khan, Muhammad Ali Gulzar
 
 ------------------------------------------------------------------------
@@ -17,11 +18,31 @@ Reproducibility: Pre-configured scripts to replicate the findings of RQ1, RQ2, a
 Extensibility: Instructions to add custom datasets and test new models via Ollama or proprietary APIs.
 
 
-------------------------------------------------------------------------
+# Badges Claimed:
 
+### Artifact Available
+-   Permanently hosted on [Zenodo](https://doi.org/10.5281/zenodo.18796544) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
+-   Fully packaged with Docker
+-   All scripts included
+
+### Artifact Reviewed
+
+The artifact is:
+
+Documented: Includes installation steps, execution commands (quick and full modes), expected outputs, and dataset format specification.
+
+Consistent: Directly implements the evaluation framework and reproduces the paper’s reported results.
+
+Complete: Contains all scripts, data (or generation pipeline), and plotting tools required for reproduction.
+
+Exercisable: Runs in a 15–20 minute quick mode and supports full pipeline execution to regenerate results.
+
+------------------------------------------------------------------------
 # 2. Provenance
 
 Paper: ICST 2026 (Accepted) 
+
+Archived Artifact: The exact version of this repository (including code, configurations, and instructions) is archived at [Zenodo](https://doi.org/10.5281/zenodo.18796544) 
 
 GitHub Repository: [GitHub](https://github.com/SEED-VT/LLMCodeImpact)
 
@@ -29,9 +50,11 @@ License: MIT
 
 ------------------------------------------------------------------------
 
-# 3. System Requirements
+# 3. Data & System Requirements
 
-## Minimum (Artifact Evaluation Mode)
+All Java and Python datasets used in the study are fully included in this artifact, along with the complete set of data processing and handling scripts.
+
+## Minimum System Requirements (Artifact Evaluation Mode)
 
 -   Docker
 -   Ollama installed on host
@@ -224,7 +247,7 @@ Or mount a custom directory during Docker execution.
 # 13. How This Artifact Meets ICST Criteria
 
 ### Artifact Available
-
+-   Permanently hosted on [Zenodo](https://doi.org/10.5281/zenodo.18796544) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
 -   Fully packaged with Docker
 -   All scripts included
 
