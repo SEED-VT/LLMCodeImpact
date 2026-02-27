@@ -1,7 +1,7 @@
 # Assessing the Impact of Code Changes on the Fault Localizability of Large Language Models
 
 **Paper:** [arXiv Preprint](https://arxiv.org/abs/2504.04372)  
-**Artifact Archive:** [Zenodo Permanent Record](https://doi.org/10.5281/zenodo.18796544)  
+**Artifact Archive:** [Zenodo Permanent Record](https://doi.org/10.5281/zenodo.18803667)  
 **Authors:** Sabaat Haroon, Ahmad Faraz Khan, Ahmad Humayun, Waris Gill, Abdul Haddi Amjad, Ali R. Butt, Mohammad Taha Khan, Muhammad Ali Gulzar
 
 ------------------------------------------------------------------------
@@ -11,7 +11,7 @@ This work provides the experimental framework used to conduct the first large-sc
 
 This artifact provides:
 
-Robustness Testing: A framework to apply Semantic-Preserving Mutations (SPMs),such as misleading comments, misleading variable names or dead code to evaluate if model's fault localization accuracy remains unaffected.
+Robustness Testing: A framework to apply Semantic-Preserving Mutations (SPMs), such as misleading comments, misleading variable names or dead code, to evaluate if the model's fault localization accuracy remains unaffected.
 
 Reproducibility: Pre-configured scripts to replicate the findings of RQ1, RQ2, and RQ3 as presented in the paper.
 
@@ -21,10 +21,9 @@ Extensibility: Instructions to add custom datasets and test new models via Ollam
 # Badges Claimed:
 
 ### Artifact Available
--   Permanently hosted on [Zenodo](https://doi.org/10.5281/zenodo.18796544) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
+-   Permanently hosted on [Zenodo](https://doi.org/10.5281/zenodo.18803667) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
 -   Fully packaged with Docker
 -   All scripts included
-
 ### Artifact Reviewed
 
 The artifact is:
@@ -42,7 +41,7 @@ Exercisable: Runs in a 15–20 minute quick mode and supports full pipeline exec
 
 Paper: ICST 2026 (Accepted) 
 
-Archived Artifact: The exact version of this repository (including code, configurations, and instructions) is archived at [Zenodo](https://doi.org/10.5281/zenodo.18796544) 
+Archived Artifact: The exact version of this repository (including code, configurations, and instructions) is archived at [Zenodo](https://doi.org/10.5281/zenodo.18803667) 
 
 GitHub Repository: [GitHub](https://github.com/SEED-VT/LLMCodeImpact)
 
@@ -59,13 +58,13 @@ All Java and Python datasets used in the study are fully included in this artifa
 -   Docker
 -   Ollama installed on host
 -   12GB RAM recommended
--   No GPU required for quick mode
+-   Commodity GPU Required
 
 ## Full Paper Reproduction
 
--   GPU required
+-   A high-end GPU (e.g., NVIDIA RTX 5090) is required for full paper reproduction.
 -   Java installed (for Java pipeline)
--   Larger runtime expected
+-   A longer runtime should be expected for full reproduction.
 
 ------------------------------------------------------------------------
 
@@ -100,7 +99,7 @@ Pull model:
 
 Runs evaluation on pre-generated data.
 
-## Step 1 --- Build Docker Image
+## Step 1: Build Docker Image
 
 From repository root:
 ``` bash
@@ -110,7 +109,7 @@ From repository root:
 
 ------------------------------------------------------------------------
 
-## Step 2 --- Run Quick Evaluation
+## Step 2: Run Quick Evaluation
 
 ### Linux
 
@@ -152,7 +151,7 @@ After completion, the `artifact/` directory will contain:
 
 # 8. Interpreting Results
 
-## RQ1 --- Robustness to SPMs
+## RQ1: Robustness to SPMs
 For each bug type (SAM), how many of the N programs were still correctly localized after each of the five SPMs (mutation strength 1)
 Open:
 
@@ -161,7 +160,7 @@ Open:
 Example:
 ![Artifact Results](images/artifact_results.png)
 
-## RQ2 --- Effect of Mutation Type & Strength
+## RQ2: Effect of Mutation Type & Strength
 - For each bug type (SAM), localization success at mutation strength 1 vs 4 for each of the five SPMs.
 - Total number of programs still correctly localized by SPM type, summed over all bug types, at strength 1 vs 4
 
@@ -174,7 +173,7 @@ Example:
 ![Mutation Strength Analysis](images/artifact_results_strength_comparison.png)
 ![Mutation Type Analysis](images/artifact_results_mutation_types.png)
 
-## RQ3 --- Effect of Fault Location
+## RQ3: Effect of Fault Location
 Cumulative count of correct (matches) vs incorrect (mismatches) localizations by bug position in the file.
 Open:
 
@@ -209,7 +208,7 @@ Requires Java installed on host:
 ``` bash
     ./run_paper_python.sh llama3.2:3b
 ```
-Long runtime. GPU required.
+This mode requires a high-end GPU and has a significantly longer runtime.
 
 ------------------------------------------------------------------------
 
@@ -247,21 +246,12 @@ Or mount a custom directory during Docker execution.
 # 13. How This Artifact Meets ICST Criteria
 
 ### Artifact Available
--   Permanently hosted on [Zenodo](https://doi.org/10.5281/zenodo.18796544) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
--   Fully packaged with Docker
--   All scripts included
+- The artifact is permanently archived on [Zenodo](https://doi.org/10.5281/zenodo.18803667) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
+- The archived version includes all source code, datasets, mutation scripts, evaluation pipelines, and plotting utilities required to reproduce the results reported in the paper. The system is containerized using Docker to ensure portability across environments.
 
 ### Artifact Reviewed
 
-The artifact is:
-
-Documented: Includes installation steps, execution commands (quick and full modes), expected outputs, and dataset format specification.
-
-Consistent: Directly implements the evaluation framework and reproduces the paper’s reported results.
-
-Complete: Contains all scripts, data (or generation pipeline), and plotting tools required for reproduction.
-
-Exercisable: Runs in a 15–20 minute quick mode and supports full pipeline execution to regenerate results.
+The artifact directly implements the methodology described in the paper and is structured to make reproduction straightforward. The README provides clear setup instructions and execution commands for both a lightweight quick mode (approximately 15–20 minutes) and the full experimental pipeline. Each research question corresponds to specific scripts and output artifacts, allowing reviewers to trace generated results back to the evaluation stages described in the paper. All components necessary to regenerate the reported findings are included in the repository.
 
 ------------------------------------------------------------------------
 
