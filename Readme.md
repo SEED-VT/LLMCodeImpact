@@ -1,7 +1,7 @@
 # Assessing the Impact of Code Changes on the Fault Localizability of Large Language Models
 
 **Paper:** [arXiv Preprint](https://arxiv.org/abs/2504.04372)  
-**Artifact Archive:** [Zenodo Permanent Record](https://doi.org/10.5281/zenodo.18803667)  
+**Artifact Archive:** [Zenodo Permanent Record](https://doi.org/10.5281/zenodo.18803969)  
 **Authors:** Sabaat Haroon, Ahmad Faraz Khan, Ahmad Humayun, Waris Gill, Abdul Haddi Amjad, Ali R. Butt, Mohammad Taha Khan, Muhammad Ali Gulzar
 
 ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ Extensibility: Instructions to add custom datasets and test new models via Ollam
 # Badges Claimed:
 
 ### Artifact Available
--   Permanently hosted on [Zenodo](https://doi.org/10.5281/zenodo.18803667) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
+-   Permanently hosted on [Zenodo](https://doi.org/10.5281/zenodo.18803969) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
 -   Fully packaged with Docker
 -   All scripts included
 ### Artifact Reviewed
@@ -41,7 +41,7 @@ Exercisable: Runs in a 15–20 minute quick mode and supports full pipeline exec
 
 Paper: ICST 2026 (Accepted) 
 
-Archived Artifact: The exact version of this repository (including code, configurations, and instructions) is archived at [Zenodo](https://doi.org/10.5281/zenodo.18803667) 
+Archived Artifact: The exact version of this repository (including code, configurations, and instructions) is archived at [Zenodo](https://doi.org/10.5281/zenodo.18803969) 
 
 GitHub Repository: [GitHub](https://github.com/SEED-VT/LLMCodeImpact)
 
@@ -246,7 +246,7 @@ Or mount a custom directory during Docker execution.
 # 13. How This Artifact Meets ICST Criteria
 
 ### Artifact Available
-- The artifact is permanently archived on [Zenodo](https://doi.org/10.5281/zenodo.18803667) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
+- The artifact is permanently archived on [Zenodo](https://doi.org/10.5281/zenodo.18803969) and supplemented on [GitHub](https://github.com/SEED-VT/LLMCodeImpact).
 - The archived version includes all source code, datasets, mutation scripts, evaluation pipelines, and plotting utilities required to reproduce the results reported in the paper. The system is containerized using Docker to ensure portability across environments.
 
 ### Artifact Reviewed
